@@ -35,8 +35,17 @@ const substitutionModule = (function () {
     ];
     function substitution(input, alphabet, encode = true) {
         if (!alphabet || alphabet.length !== 26) return false;
+
+        //makes the inputted alphabet all lowercase then splits it into an array
+        //to compare to the alphabet array that was pre-made
         let cipher = alphabet.toLowerCase().split("");
+
+        //sanitizing the user input
         let str = input.toLowerCase();
+
+        // makes the cipher array into a Set object which can only contain unique characters
+        // then checks the length of the new Set object and the old arr if it is not the same
+        //then there were non unique characters in the cipher
         if (new Set(cipher).size !== cipher.length) return false;
 
         let result = "";
@@ -57,6 +66,7 @@ const substitutionModule = (function () {
                     result += str[i];
                     continue;
                 }
+                //gets the index of the letter from the alphabet array that was pre-made
                 let index = arr.indexOf(str[i]);
 
                 result += cipher[index];

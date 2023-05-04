@@ -37,24 +37,40 @@ const polybiusModule = (function () {
         const str = input.toLowerCase();
         let result = [];
         if (!encode) {
+            //this sanitizes the encoded string so there are no spaces
+            //then checks the length if its not even it returns false
             let noSpaces = str.split(" ").join("");
             if (noSpaces.length % 2 === 1) return false;
+
             for (let i = 0; i < str.length; i += 2) {
+                //since the for loop advances by 2 this checks to see if the character
+                //at index i is a space then if it is it makes i reduce by one
+                //this is because a space would make the str length uneven resulting in
+                //the wrong number pairs
                 if (str[i] === " ") {
                     result.push(" ");
                     i--;
                     continue;
                 }
 
+                // checks for the specific cases of i and j
+                //if it shows up in the string just replace it and continue;
                 if (str[i] === "4" && str[i + 1] === "2") {
                     result.push("(i/j)");
                     continue;
                 }
 
-                let row = parseInt(str[i]) - 1;
-                let col = parseInt(str[i + 1]) - 1;
+                //the minus 1 is because arrays are zero-indexed
+                //we do the opposite when we are encoding the string see line 82
+                let col = parseInt(str[i]) - 1;
+                let row = parseInt(str[i + 1]) - 1;
 
-                let index = col * 5 + row;
+                //this math basically takes the second number which would be the left rows
+                //and multiplies it by 5 because for every row we would've HAD to have
+                //gone through 5 letters of the alphabet
+                //then we add the column because thats the specific selector for
+                //each letter thus giving us the index from our alphabet array
+                let index = row * 5 + col;
                 result.push(arr[index]);
             }
         } else {
@@ -63,10 +79,20 @@ const polybiusModule = (function () {
                     result.push("42");
                     continue;
                 }
+
+                //this ignores all other characters except those in the alphabet array
                 if (!arr.includes(str[i])) {
                     result.push(str[i]);
                     continue;
                 }
+
+                //this effectively does the exact opposite of decoding
+                //we grab the remainder of the array length divided by 5
+                //this gives us the issue of showing 0 whenever we divide by 5
+                //so we just catch that case and move on
+                //then to get what row we are on we just divide the array length
+                //by 5 then we round up as it would be giving us the correct numbers but in decimal
+                //so we just force it to round up using Math.ceil
                 let letterIdx = arr.indexOf(str[i]) + 1;
                 let remainder = letterIdx % 5;
                 let row = Math.ceil(letterIdx / 5);
