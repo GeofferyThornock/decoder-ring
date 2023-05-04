@@ -23,7 +23,7 @@ describe("substitution()", () => {
     it("should not allow multiple of the same character in given alphabet", () => {
         const actual = substitution("message", "aabbaabbaabbaabbddaaddfftt");
 
-        expected(actual).to.be.false;
+        expect(actual).to.be.false;
     });
     it("should maintain spaces through", () => {
         const expected = "elp xhm xf mbymwwmfj dne";
@@ -32,7 +32,7 @@ describe("substitution()", () => {
             "xoyqmcgrukswaflnthdjpzibev"
         );
 
-        expected(actual).to.equal(expected);
+        expect(actual).to.equal(expected);
     });
     it("should return the correct decoded string if given the correct alphabet", () => {
         const expected = "message";
@@ -42,6 +42,6 @@ describe("substitution()", () => {
             false
         );
 
-        expected(actual).to.equal(expected);
+        expect(actual).to.equal(expected);
     });
 });
