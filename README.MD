@@ -10,6 +10,7 @@ takes in three inputs then returns the shifted string _encode is optional_
 ### Example Usage
 
 -   `caesar("hello world", 4)`
+
     > returns "khoor zruog"
 
 ---
