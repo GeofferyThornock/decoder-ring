@@ -1,4 +1,4 @@
-# caesar cipher
+# Caesar Cipher
 
 takes in three inputs then returns the shifted string _encode is optional_
 
@@ -7,9 +7,7 @@ takes in three inputs then returns the shifted string _encode is optional_
 
 > if you would like to decode a string make encode false
 
----
-
-### example usage
+### Example Usage
 
 -   `caesar("hello world", 4)`
     > returns "khoor zruog"
@@ -26,8 +24,6 @@ takes in 2 inputs then returns the correct number pairs the correspond to the nu
 
     > if you would like to decode a string make encode false
 
----
-
 ## Example Usage
 
 -   `polybius("Hello world");`
@@ -41,8 +37,6 @@ takes in 3 inputs then returns your string but substituted for letters in your i
 
 -   `substitution(input, alphabet, encode)`
     > as always encode is true by default if you want to decode set it to false
-
----
 
 ## Example Usage
 
