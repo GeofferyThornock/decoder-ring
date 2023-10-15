@@ -1,5 +1,5 @@
 ### Encoding/Decoding Application
-![Picture of front page](https://imgur.com/UVxp5Oe)
+![Picture of front page](https://i.imgur.com/UVxp5Oe.png)
 #
 
 # Caesar Cipher
