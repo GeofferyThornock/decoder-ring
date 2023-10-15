@@ -19,6 +19,8 @@ takes in three inputs then returns the shifted string _encode is optional_
 
 # Polybius Cipher
 
+A type of substitution cipher that substitutes each letter with the corrosponding polybius square number
+
 takes in 2 inputs then returns the correct number pairs the correspond to the number table _encode is optional_
 
 -   `polybius(input, encode)`
@@ -35,6 +37,8 @@ takes in 2 inputs then returns the correct number pairs the correspond to the nu
 ---
 
 # Substitution Cipher
+
+A Substitution Cipher that takes in another alphabet and replaces your input with said alphabet
 
 takes in 3 inputs then returns your string but substituted for letters in your inputted alphabet _encode is optional_
 
