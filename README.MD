@@ -1,3 +1,7 @@
+### Encoding/Decoding Application
+![Picture of front page](https://imgur.com/UVxp5Oe)
+#
+
 # Caesar Cipher
 
 The Caesar Shift is a type of substitution cipher originally used by Julius Caesar to protect messages of military significance. It relies on taking the alphabet and "shifting" letters to the right or left, based on the typical alphabetic order.
