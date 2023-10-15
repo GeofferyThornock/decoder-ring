@@ -1,6 +1,6 @@
 # Caesar Cipher
 
-a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on.
+The Caesar Shift is a type of substitution cipher originally used by Julius Caesar to protect messages of military significance. It relies on taking the alphabet and "shifting" letters to the right or left, based on the typical alphabetic order.
 
 takes in three inputs then returns the shifted string _encode is optional_
 
@@ -19,7 +19,7 @@ takes in three inputs then returns the shifted string _encode is optional_
 
 # Polybius Cipher
 
-A type of substitution cipher that substitutes each letter with the corrosponding polybius square number
+The Polybius Square is a cipher that is achieved by arranging a typical alphabet into a grid. Each letter is represented through a coordinate. For example, in the above table, the letter "B" would be represented by the numerical pair "21".
 
 takes in 2 inputs then returns the correct number pairs the correspond to the number table _encode is optional_
 
@@ -38,7 +38,7 @@ takes in 2 inputs then returns the correct number pairs the correspond to the nu
 
 # Substitution Cipher
 
-A Substitution Cipher that takes in another alphabet and replaces your input with said alphabet
+The Substitution Cipher requires a standard alphabet and a substitution alphabet. Letters from the standard alphabet will be transposed to the standard alphabet. This cipher requires that the recipient have the substitution alphabet, otherwise it will be difficult for them to decode the message.
 
 takes in 3 inputs then returns your string but substituted for letters in your inputted alphabet _encode is optional_
 
